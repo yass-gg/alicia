@@ -1,0 +1,166 @@
+/* Paleta inspirada en el País de las Maravillas */
+:root {
+    --bg-color: #2b1035;
+    --card-bg: #fdfbf7;
+    --text-color: #2c2c2c;
+    --primary-color: #5c0632; /* Borgoña / Reina */
+    --accent-color: #bfa15f;  /* Dorado */
+    --border-color: #d1c7b7;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+header, footer {
+    text-align: center;
+    color: #fdfbf7;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    color: var(--accent-color);
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+/* Estilos de la barra de navegación (nav) */
+nav {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a:focus {
+    color: #fff;
+    text-decoration: underline;
+}
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 3px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+h2 {
+    font-family: 'Cinzel Decorative', cursive;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-top: 0;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 8px;
+}
+
+.regla-info {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #555;
+    background-color: #f4eee1;
+    padding: 10px;
+    border-left: 4px solid var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+input[type="number"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(92, 6, 50, 0.3);
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: #fdfbf7;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-family: 'Cinzel Decorative', cursive;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #7a0944;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #f4eee1;
+    border: 1px dashed var(--primary-color);
+    font-size: 0.98rem;
+}
+
+.error {
+    color: #a80000;
+    font-weight: bold;
+    background-color: #fde8e8;
+    border-color: #a80000;
+}
+
+.exito {
+    color: #0b5e26;
+    background-color: #e6f4ea;
+    border-color: #0b5e26;
+}

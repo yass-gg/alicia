@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividad Práctica: Alicia en el País de las Maravillas</title>
+    <link rel="stylesheet" href="styless.css">
+    <!-- Fuente temática de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Alicia en el País de las Maravillas</h1>
+        <p>Laboratorio Interactivo de Programación Web I</p>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#ejercicio1">Poción Mágica</a></li>
+                <li><a href="#ejercicio2">Merienda Loca</a></li>
+                <li><a href="#ejercicio3">Desafío de la Reina</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- EJERCICIO 1 -->
+        <section id="ejercicio1" class="card">
+            <h2>Ejercicio 1: La poción mágica de Alicia</h2>
+            <p class="regla-info">Regla mágica: Nueva Altura = Altura Inicial + (Mililitros de Poción × 0.5) - Efecto Evaporación (5 cm). Puerta fija: <strong>150 cm</strong>.</p>
+            
+            <form id="formPocion">
+                <div class="form-group">
+                    <label for="alturaInicial">Altura inicial de Alicia (cm):</label>
+                    <input type="number" id="alturaInicial" step="any" required>
+                </div>
+                <div class="form-group">
+                    <label for="mlPocion">Cantidad de poción (ml):</label>
+                    <input type="number" id="mlPocion" step="any" required>
+                </div>
+                <button type="submit" class="btn">Beber Poción</button>
+            </form>
+            <div id="resultadoPocion" class="resultado" aria-live="polite"></div>
+        </section>
+
+        <!-- EJERCICIO 2 -->
+        <section id="ejercicio2" class="card">
+            <h2>Ejercicio 2: La merienda del Sombrerero Loco</h2>
+            <p class="regla-info">Opciones y precios: Té Real ($10), Infusión del Tiempo ($15), Café de Marzo ($12), Jugo de Lirios ($8). Descuento del 10% si pides más de 5 tazas.</p>
+            
+            <form id="formMerienda">
+                <div class="form-group">
+                    <label for="nombreInvitado">Nombre del invitado:</label>
+                    <input type="text" id="nombreInvitado" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipoBebida">Tipo de bebida:</label>
+                    <select id="tipoBebida" required>
+                        <option value="">-- Seleccione una bebida --</option>
+                        <option value="te">Té Real ($10)</option>
+                        <option value="infusion">Infusión del Tiempo ($15)</option>
+                        <option value="cafe">Café de Marzo ($12)</option>
+                        <option value="jugo">Jugo de Lirios ($8)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cantidadTazas">Cantidad de tazas (Máx 20):</label>
+                    <input type="number" id="cantidadTazas" min="1" max="20" required>
+                </div>
+                <button type="submit" class="btn">Servir Merienda</button>
+            </form>
+            <div id="resultadoMerienda" class="resultado" aria-live="polite"></div>
+        </section>
+
+        <!-- EJERCICIO 3 -->
+        <section id="ejercicio3" class="card">
+            <h2>Ejercicio 3: El desafío de la Reina de Corazones</h2>
+            <p class="regla-info">Ingresa un número límite (máx. 50) para analizar las cartas numeradas del 1 hasta dicho valor.</p>
+            
+            <form id="formReina">
+                <div class="form-group">
+                    <label for="limiteCartas">Cantidad de cartas a analizar:</label>
+                    <input type="number" id="limiteCartas" min="1" max="50" required>
+                </div>
+                <button type="submit" class="btn">Juzgar Cartas</button>
+            </form>
+            <div id="resultadoReina" class="resultado" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Estudiante: Yasmin Clavijo | Programación Web I</p>
+    </footer>
+
+    <script src="scriptAlicia.js"></script>
+</body>
+</html>
